@@ -25,6 +25,7 @@
 
 const yelling = words => {
   // Your code here
+  return words.map(word => word.toUpperCase())
 }
 
 /**
@@ -37,6 +38,9 @@ const yelling = words => {
  *
  */
 
+const doubleTrouble = numbers => {
+  return numbers.map(number => number * 2)
+}
 // ...
 
 /*
@@ -47,6 +51,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const stringyIndexes = strings => {
+  return strings.map((string, index) => `${string} is at index ${index}`)
+}
 
 // ...
 
@@ -57,6 +64,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const onlyTheEvenSurvive = numbers => {
+  return numbers.filter(number => number % 2 === 0)
+}
 
 // ...
 
@@ -67,6 +77,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const onlyTheEvenIndexedSurvive = numbers => {
+  return numbers.filter((number, index) => index % 2 === 0)
+}
 
 // ...
 
@@ -86,6 +99,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const bestMoviesOfTheYear = (movies, year) => {
+  return movies.filter(movie => movie.year === year && movie.score > 90)
+}
 
 // ...
 
@@ -97,6 +113,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const everyoneIsOdd = numbers => {
+  return numbers.every(number => number % 2 != 0)
+}
 
 // ...
 
@@ -108,6 +127,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const findTheNeedle = strings => {
+  return strings.find(string => string.includes('needle'))
+}
 
 // ...
 
@@ -120,6 +142,9 @@ const yelling = words => {
  *
  */
 
+const findTheNeedleIndex = strings => {
+  return strings.findIndex((string, index) => string.includes('needle'))
+}
 // ...
 
 /*
@@ -130,6 +155,9 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const someoneToLove = strings => {
+  return strings.some(string => string.length === 4)
+}
 
 // ...
 
@@ -242,7 +270,7 @@ const tests = [
     }
   },
   {
-    methodName: 'stringyIndex',
+    methodName: 'stringyIndexes',
     test: () => {
       return compare(stringyIndexes(['how', 'now', 'brown', 'cow']), [
         'how is at index 0',
@@ -264,7 +292,7 @@ const tests = [
     }
   },
   {
-    methodName: 'onlyTheEvenIndexSurvive',
+    methodName: 'onlyTheEvenIndexedSurvive',
     test: () => {
       return compare(
         onlyTheEvenIndexedSurvive([
